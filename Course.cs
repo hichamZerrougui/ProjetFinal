@@ -12,6 +12,8 @@ namespace ProjetFinal
         public int Code { get; set; }
         public String Titre { get; set; }
 
+        public List<Course> courslite { get; set; } = new List<Course>();
+
         public Course()
         {
 
@@ -20,17 +22,41 @@ namespace ProjetFinal
         {
             this.NumeroDuCours = numeroDuCours;
         }
-        public Course( int classe ,int numeroDuCours, int code, String titre) : this(numeroDuCours)
+        public Course(int numeroDuCours, int code, String titre) : this(numeroDuCours)
         {
-            this.Classe = classe;
+          
             this.Code = code;
             this.Titre = titre;
             
         }
 
 
+        public void Ajoutercours(Course cours) { this.courslite.Add(cours); }
+        public void Ajouterecours(int numeroDuCours, int code, String titre) { this.Ajoutercours(new Course(numeroDuCours,code,titre)); }
+
+        public Course Findcours(int code, String titre)
+        {
+            Course cRes = null;
+            foreach (Course c in courslite)
+                if (c.Code == code && c.Titre == titre) { cRes = c; break; }
+            return cRes;
+        }
+        public Course Findcours(int numerocours)
+        {
+            Course cRes = null;
+            foreach (Course c in courslite)
+                if (c.NumeroDuCours == numerocours) { cRes = c; break; }
+            return cRes;
+        }
+
+        public void Supprimercours(int numerocours)
+        {
+            this.courslite.Remove(this.Findcours(numerocours));
+        }
 
 
+
+        
 
 
 
