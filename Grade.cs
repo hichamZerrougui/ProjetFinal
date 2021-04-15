@@ -9,41 +9,64 @@ namespace ProjetFinal
     class Grade
     {
 
-
-
-        public List<Student> etudiantliste { get;set; } = new List<Student>();
-        public List<Course> courslite{ get; set; } = new List<Course>();
+        public int NumeroEtudiant { get; set; }
+        public int NumeroDuCours { get; set; }
         public double Note { get; set; }
+        public List<Grade> gradliste { get; set; } = new List<Grade>();
 
-        List<Grade> listenote = new List<Grade>();
 
 
         public Grade()
         {
 
         }
-
         
         
-       
- 
-
-        public void Addcour(Course c) { this.courslite.Add(c); }
-
-        public void Addcour(int classe, int numeroDuCours, int code, String titre) {this.Addcour(new Course( classe,  numeroDuCours,code, titre)); }
-
-
-        public void Addetudiant(Student c) { this.etudiantliste.Add(c); }
-
-        public void Addetudiant(int numeroEtudiant, String nom, String prenom) { this.Addetudiant(new Student(numeroEtudiant, nom,prenom)); }
-
-
-        public void Addnote(Grade g) { 
-            this.listenote.Add(g); 
+        public Grade(int numeroEtudiant, int numeroDuCours, double note) 
+        {
+            this.NumeroEtudiant = numeroEtudiant;
+            this.NumeroDuCours = numeroDuCours;
+            this.Note = note;
         }
 
-        public void Addnote(Student numeroEtudiant, Course numeroDuCours, double note)
-        { this.Addetudiant(new Grade (numeroEtudiant, numeroDuCours, note)); }
+
+        public void Ajouternote(Grade note) { this.gradliste.Add(note); }
+        public void Ajouternote(int numeroEtudiant, int numeroDuCours, double note) { this.Ajouternote(new Grade(numeroEtudiant,numeroDuCours,note)); }
+
+        public Grade Findnote(int numeroEtudiant)
+        {
+            Grade cRes = null;
+            foreach (Grade n in gradliste)
+                if (n.NumeroEtudiant == numeroEtudiant) { cRes = n; break; }
+            return cRes;
+        }
+        public Grade Findnote(int numeroEtudiant, int numerocours)
+        {
+            Grade cRes = null;
+            foreach (Grade n in gradliste)
+                if (n.NumeroEtudiant == numeroEtudiant && n.NumeroDuCours== numerocours) { cRes = n; break; }
+            return cRes;
+        }
+
+      
+
+        public void Supprimercours(int numeroetudiant)
+        {
+            this.gradliste.Remove(this.Findnote(numeroetudiant));
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

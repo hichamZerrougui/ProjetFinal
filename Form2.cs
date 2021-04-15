@@ -35,6 +35,18 @@ namespace ProjetFinal
         private void Enregistrer_Click(object sender, EventArgs e)
         {
 
+            Student etudiant = new Student();
+            etudiant.Ajouteretudiant(int.Parse(sourcenumetudiant.Text),sourcenom.Text,sourceprenom.Text);
+
+            Grade note = new Grade();
+            Form1 form1 = new Form1();
+          
+                
+
+           // note.Ajouternote(int.Parse(sourcenumetudiant.Text), int.Parse())
+
+
+
         }
 
         private void label6_Click(object sender, EventArgs e)

@@ -36,10 +36,10 @@ namespace ProjetFinal
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Enregistrer = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.sourcenumetudiant = new System.Windows.Forms.TextBox();
+            this.sourcenote = new System.Windows.Forms.TextBox();
+            this.sourceprenom = new System.Windows.Forms.TextBox();
+            this.sourcenom = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -109,43 +109,43 @@ namespace ProjetFinal
             this.Enregistrer.UseVisualStyleBackColor = true;
             this.Enregistrer.Click += new System.EventHandler(this.Enregistrer_Click);
             // 
-            // textBox1
+            // sourcenumetudiant
             // 
-            this.textBox1.Location = new System.Drawing.Point(333, 133);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 26);
-            this.textBox1.TabIndex = 7;
+            this.sourcenumetudiant.Location = new System.Drawing.Point(333, 133);
+            this.sourcenumetudiant.Name = "sourcenumetudiant";
+            this.sourcenumetudiant.Size = new System.Drawing.Size(179, 26);
+            this.sourcenumetudiant.TabIndex = 7;
             // 
-            // textBox2
+            // sourcenote
             // 
-            this.textBox2.Location = new System.Drawing.Point(333, 356);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 26);
-            this.textBox2.TabIndex = 8;
+            this.sourcenote.Location = new System.Drawing.Point(333, 356);
+            this.sourcenote.Name = "sourcenote";
+            this.sourcenote.Size = new System.Drawing.Size(179, 26);
+            this.sourcenote.TabIndex = 8;
             // 
-            // textBox3
+            // sourceprenom
             // 
-            this.textBox3.Location = new System.Drawing.Point(333, 286);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(179, 26);
-            this.textBox3.TabIndex = 9;
+            this.sourceprenom.Location = new System.Drawing.Point(333, 286);
+            this.sourceprenom.Name = "sourceprenom";
+            this.sourceprenom.Size = new System.Drawing.Size(179, 26);
+            this.sourceprenom.TabIndex = 9;
             // 
-            // textBox4
+            // sourcenom
             // 
-            this.textBox4.Location = new System.Drawing.Point(333, 212);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(179, 26);
-            this.textBox4.TabIndex = 10;
+            this.sourcenom.Location = new System.Drawing.Point(333, 212);
+            this.sourcenom.Name = "sourcenom";
+            this.sourcenom.Size = new System.Drawing.Size(179, 26);
+            this.sourcenom.TabIndex = 10;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(990, 586);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.sourcenom);
+            this.Controls.Add(this.sourceprenom);
+            this.Controls.Add(this.sourcenote);
+            this.Controls.Add(this.sourcenumetudiant);
             this.Controls.Add(this.Enregistrer);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -170,9 +170,9 @@ namespace ProjetFinal
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Enregistrer;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox sourcenumetudiant;
+        private System.Windows.Forms.TextBox sourcenote;
+        private System.Windows.Forms.TextBox sourceprenom;
+        private System.Windows.Forms.TextBox sourcenom;
     }
 }

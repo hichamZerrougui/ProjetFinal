@@ -29,12 +29,22 @@ namespace ProjetFinal
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            Course cour = new Course();
+ 
+
+            cour.Ajouterecours(int.Parse(sourcenumcours.Text), int.Parse(sourcecodecours.Text) ,sourcetitrecours.Text);
             Form2 form2 = new Form2();
             form2.ShowDialog();
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }
